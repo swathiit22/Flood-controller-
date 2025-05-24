@@ -1,0 +1,10 @@
+function fetchFloodLevel() {
+  // Simulated API response
+  const level = Math.floor(Math.random() * 100);
+  document.getElementById("flood-level").textContent = `Current Water Level: ${level} cm`;
+}
+
+function toggleGate(action) {
+  alert(`Gate will be ${action}ed.`);
+  // Implement backend API logic if needed
+}
