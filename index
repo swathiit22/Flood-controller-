@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flood Alert Controller</title>
+  <link rel="stylesheet" href="flood_style.css">
+</head>
+<body>
+  <header>
+    <h1>Smart Flood Controller</h1>
+    <nav>
+      <a href="#status">Status</a>
+      <a href="#control">Control</a>
+      <a href="#feedback">Feedback</a>
+    </nav>
+  </header>
+  <main>
+    <section id="status">
+      <h2>Real-time Flood Level</h2>
+      <p id="flood-level">Fetching data...</p>
+      <button onclick="fetchFloodLevel()">Refresh</button>
+    </section>
+
+    <section id="control">
+      <h2>Gate Control Panel</h2>
+      <button onclick="toggleGate('open')">Open Gate</button>
+      <button onclick="toggleGate('close')">Close Gate</button>
+    </section>
+
+    <section id="feedback">
+      <h2>Send Feedback</h2>
+      <form action="flood_contact.php" method="post">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 Smart Flood System</p>
+  </footer>
+  <script src="flood_script.js"></script>
+</body>
+</html>
